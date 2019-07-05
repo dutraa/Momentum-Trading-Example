@@ -21,7 +21,7 @@ session = requests.session()
 
 # We only consider stocks with per-share prices inside this range
 min_share_price = 2.0
-max_share_price = 13.0
+max_share_price = 25.0
 # Minimum previous-day dollar volume for a stock we might consider
 min_last_dv = 500000
 # Stop limit to default to
@@ -55,7 +55,7 @@ def get_tickers():
         ticker.lastTrade['p'] >= min_share_price and
         ticker.lastTrade['p'] <= max_share_price and
         ticker.prevDay['v'] * ticker.lastTrade['p'] > min_last_dv and
-        ticker.todaysChangePerc >= 3.5
+        ticker.todaysChangePerc >= 2.5
     )]
 
 
