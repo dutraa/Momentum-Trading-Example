@@ -7,9 +7,9 @@ from datetime import datetime, timedelta
 from pytz import timezone
 
 # Replace these with your API connection info from the dashboard
-base_url = 'Your API URL'
-api_key_id = 'Your API Key'
-api_secret = 'Your API Secret'
+base_url = 'https://api.alpaca.markets'
+api_key_id = 'AKC7TGCRJZKXTC888UM0'
+api_secret = 'kubMdUc5gMhEYvi8e912qz5S87JRRTwJ4JWuUSDb'
 
 api = tradeapi.REST(
     base_url=base_url,
@@ -25,9 +25,9 @@ max_share_price = 25.0
 # Minimum previous-day dollar volume for a stock we might consider
 min_last_dv = 500000
 # Stop limit to default to
-default_stop = .95
+default_stop = .85
 # How much of our portfolio to allocate to any one position
-risk = 0.001
+risk = 0.080
 
 
 def get_1000m_history_data(symbols):
