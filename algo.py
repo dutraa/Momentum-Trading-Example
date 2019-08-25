@@ -5,6 +5,12 @@ from ta import macd
 import numpy as np
 from datetime import datetime, timedelta
 from pytz import timezone
+from google.client import firestore
+
+db = firestore.Client(project="Project Sentient", credentials="firestoreCreds.json")
+
+collection_ref = db.collection("momentumStrategyOrders")
+collection_ref.add({"start":"on"})
 
 # Replace these with your API connection info from the dashboard
 base_url = 'https://api.alpaca.markets'
